@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Slidev cache
+.slidev/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Lock files
+package-lock.json

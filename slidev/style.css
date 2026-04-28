@@ -1,0 +1,16 @@
+/*
+ * Fix: Goto dialog stays visible / won't close with many slides.
+ * The dialog hides by moving to -top-20 (-80px), but the autocomplete
+ * list can extend beyond that. Force it truly hidden when inactive.
+ */
+#slidev-goto-dialog.-top-20 {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Cap the autocomplete list height so it never overflows the viewport */
+#slidev-goto-dialog .autocomplete-list {
+  max-height: 60vh !important;
+  overflow-y: auto !important;
+}
