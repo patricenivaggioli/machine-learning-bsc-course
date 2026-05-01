@@ -85,11 +85,15 @@ layout: section
 
 A program **learns from data** instead of being explicitly programmed with rules.
 
-> *"A program learns from experience E w.r.t. task T and measure P, if its performance on T improves with E."* — Tom Mitchell
-
 ### You already use ML every day
 
-Email spam filter · Netflix recommendations · Voice assistants · Auto-correct · Google Photos face recognition · GPS traffic prediction
+- Netflix/YouTube recommendations
+- Google Photos face recognition
+- Spotify Discover Weekly
+- Face unlock (iPhone Face ID)
+- Siri / Alexa / Google Assistant
+- Amazon "You might also like"
+- Google Maps ETA
 
 </div>
 
@@ -231,7 +235,7 @@ graph LR
 
 # Working with Data
 
-<div class="grid grid-cols-2 gap-4 mt-2 text-sm leading-tight">
+<div class="grid grid-cols-2 gap-20 mt-2 text-xs leading-tight">
 
 <div class="space-y-1">
 
@@ -245,6 +249,12 @@ A **table** where each row = one sample, each column = one feature, and one spec
 | 2 | 120 | 3 | Paris | 450k |
 | 3 | 60 | 1 | Marseille | 140k |
 
+
+
+</div>
+
+<div class="space-y-1">
+
 ### Feature types
 
 **Numerical** — continuous (temperature) or discrete (rooms)
@@ -252,6 +262,15 @@ A **table** where each row = one sample, each column = one feature, and one spec
 **Categorical** — nominal (colour, city) or ordinal (low/med/high)
 
 </div>
+
+</div>
+
+
+---
+
+# Working with Data
+
+<div class="grid grid-cols-2 gap-20 mt-2 text-xs leading-tight">
 
 <div class="space-y-1">
 
@@ -261,6 +280,10 @@ A **table** where each row = one sample, each column = one feature, and one spec
 |:-------|:-----|:--------|
 | **One-hot** | Nominal (no order) | Red → [1,0,0] |
 | **Label** | Ordinal (ordered) | Low=0, Med=1, High=2 |
+
+</div>
+
+<div class="space-y-1">
 
 ### Feature scaling
 
@@ -279,11 +302,11 @@ A **table** where each row = one sample, each column = one feature, and one spec
 
 # Train / Validation / Test Split
 
-<div class="grid grid-cols-2 gap-16 mt-2 text-sm leading-tight">
+<div class="grid grid-cols-2 gap-20 mt-2 text-sm leading-tight">
 
 <div class="mt-1">
 
-```mermaid {scale: 0.75}
+```mermaid {scale: 0.65}
 graph LR
     D["Full Dataset<br/>100%"] --> TR["Training Set<br/>60-70%"]
     D --> VA["Validation Set<br/>15-20%"]
@@ -331,7 +354,7 @@ Use the **IQR method**: anything below $Q1 - 1.5 \times IQR$ or above $Q3 + 1.5 
 
 # How Do We Know a Model Is Good?
 
-<div class="grid grid-cols-2 gap-4 mt-2 text-xs leading-tight">
+<div class="grid grid-cols-2 gap-20 mt-2 text-xs leading-tight">
 
 <div class="space-y-1">
 
@@ -352,11 +375,25 @@ graph LR
 | Test | Poor | Good | Poor |
 | Fix | More complex model | — | Simplify, more data |
 
+
+</div>
+
+<div class="space-y-1">
+
 #### k-Fold Cross-Validation
 
 Split data into k folds → train on k−1, validate on 1 → repeat k times → average scores. Gives robust estimates.
 
 </div>
+
+</div>
+
+
+---
+
+# How Do We Know a Model Is Good?
+
+<div class="grid grid-cols-2 gap-20 mt-2 text-xs leading-tight">
 
 <div class="space-y-1">
 
@@ -368,6 +405,10 @@ Split data into k folds → train on k−1, validate on 1 → repeat k times →
 | **Precision** | $TP / (TP + FP)$ — of predicted +, how many are truly + |
 | **Recall** | $TP / (TP + FN)$ — of actual +, how many did we catch |
 | **F1 Score** | Harmonic mean of Precision & Recall |
+
+</div>
+
+<div class="space-y-1">
 
 #### Regression Metrics
 
@@ -382,11 +423,12 @@ Split data into k folds → train on k−1, validate on 1 → repeat k times →
 
 </div>
 
+
 ---
 
 # The Confusion Matrix
 
-<div class="grid grid-cols-2 gap-4 mt-2 text-sm leading-tight">
+<div class="grid grid-cols-2 gap-20 mt-2 text-sm leading-tight">
 
 <div class="space-y-1">
 
@@ -396,6 +438,8 @@ Split data into k folds → train on k−1, validate on 1 → repeat k times →
 |:--|:--|:--|
 | **Actual +** | TP ✅ | FN ❌ |
 | **Actual −** | FP ❌ | TN ✅ |
+
+### Meaning
 
 **Precision** = TP / (TP + FP) — "When I say positive, am I right?"
 
