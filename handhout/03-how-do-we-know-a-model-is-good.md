@@ -61,11 +61,11 @@ Instead of relying on a single train/test split (which can be "lucky" or "unluck
 ```mermaid
 flowchart TD
     D["Full Dataset"] --> S["Split into k=5 folds"]
-    S --> F1["Fold 1: TEST | Train | Train | Train | Train"]
-    S --> F2["Fold 2: Train | TEST | Train | Train | Train"]
-    S --> F3["Fold 3: Train | Train | TEST | Train | Train"]
-    S --> F4["Fold 4: Train | Train | Train | TEST | Train"]
-    S --> F5["Fold 5: Train | Train | Train | Train | TEST"]
+    S --> F1["Fold 1: TEST · Train · Train · Train · Train"]
+    S --> F2["Fold 2: Train · TEST · Train · Train · Train"]
+    S --> F3["Fold 3: Train · Train · TEST · Train · Train"]
+    S --> F4["Fold 4: Train · Train · Train · TEST · Train"]
+    S --> F5["Fold 5: Train · Train · Train · Train · TEST"]
     F1 --> R["Average the 5 scores<br/>→ robust estimate"]
     F2 --> R
     F3 --> R

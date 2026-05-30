@@ -1,21 +1,14 @@
 ---
 theme: default
-title: Machine Learning Foundations
-info: |
-  ## Machine Learning Foundations
-  A first-year bachelor introduction to machine learning concepts, algorithms, and hands-on practice with Python.
-class: text-center
 highlighter: shiki
-drawings:
-  persist: false
 transition: slide-left
 mdc: true
 ---
 
 # Machine Learning Foundations
 
-<div class="pt-8">
-  <span class="text-orange-400 font-bold text-xl">AI Fundamentals - Module 2</span>
+<div class="pt-10">
+  <span class="text-orange-400 font-bold text-xl">AI Foundations for Networks - Module 2</span>
 </div>
 
 <div class="pt-6 text-left inline-block">
@@ -23,7 +16,7 @@ mdc: true
 </div>
 
 <div class="abs-br m-6 text-sm text-gray-400">
-  2026
+  ESGI, 2026
 </div>
 
 ---

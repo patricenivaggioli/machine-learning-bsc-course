@@ -40,14 +40,14 @@ flowchart LR
         P2 --> M["Model (learned rules)"]
     end
 
-    style R fill:#ffeaa7,stroke:#fdcb6e,color:#000
-    style D1 fill:#74b9ff,stroke:#0984e3,color:#000
-    style P1 fill:#dfe6e9,stroke:#636e72,color:#000
-    style O1 fill:#55efc4,stroke:#00b894,color:#000
-    style D2 fill:#74b9ff,stroke:#0984e3,color:#000
-    style O2 fill:#55efc4,stroke:#00b894,color:#000
-    style P2 fill:#dfe6e9,stroke:#636e72,color:#000
-    style M fill:#a29bfe,stroke:#6c5ce7,color:#000
+    style R fill:#ffeaa7,stroke:#fdcb6e
+    style D1 fill:#74b9ff,stroke:#0984e3
+    style P1 fill:#dfe6e9,stroke:#636e72
+    style O1 fill:#55efc4,stroke:#00b894
+    style D2 fill:#74b9ff,stroke:#0984e3
+    style O2 fill:#55efc4,stroke:#00b894
+    style P2 fill:#dfe6e9,stroke:#636e72
+    style M fill:#a29bfe,stroke:#6c5ce7
 ```
 
 ---
@@ -63,9 +63,9 @@ Some problems are **too complex** or **too dynamic** to write rules for by hand.
 | Translating languages | Grammar rules + dictionary — rigid, poor quality | Learn from millions of translated sentence pairs |
 
 **ML shines when:**
-- The problem has **lots of data** but rules are hard to define
-- The patterns **change over time** (fraud detection, user preferences)
-- The problem is too **complex for humans** to articulate (image recognition)
+- The problem has **lots of data** but rules are hard to define.  
+- The patterns **change over time** (fraud detection, user preferences).  
+- The problem is too **complex for humans** to articulate (image recognition).  
 
 ---
 
@@ -121,20 +121,20 @@ Every ML project follows roughly the same steps:
 ```mermaid
 flowchart TD
     A["1. Define the Problem"] --> B["2. Collect & Explore Data"]
-    B --> C["3. Prepare Data<br/>(clean, split, scale)"]
+    B --> C["3. Prepare Data (clean, split, scale)"]
     C --> D["4. Choose & Train a Model"]
     D --> E["5. Evaluate the Model"]
     E -->|"Not good enough"| F["6. Improve<br/>(tune, try another model)"]
     F --> D
     E -->|"Good enough"| G["7. Deploy & Monitor"]
 
-    style A fill:#ffeaa7,stroke:#fdcb6e,color:#000
-    style B fill:#74b9ff,stroke:#0984e3,color:#000
-    style C fill:#74b9ff,stroke:#0984e3,color:#000
-    style D fill:#a29bfe,stroke:#6c5ce7,color:#000
-    style E fill:#55efc4,stroke:#00b894,color:#000
-    style F fill:#fab1a0,stroke:#e17055,color:#000
-    style G fill:#55efc4,stroke:#00b894,color:#000
+    style A fill:#ffeaa7,stroke:#fdcb6e
+    style B fill:#74b9ff,stroke:#0984e3
+    style C fill:#74b9ff,stroke:#0984e3
+    style D fill:#a29bfe,stroke:#6c5ce7
+    style E fill:#55efc4,stroke:#00b894
+    style F fill:#fab1a0,stroke:#e17055
+    style G fill:#55efc4,stroke:#00b894
 ```
 
 We will explore each step in detail throughout this guide:
@@ -176,13 +176,13 @@ flowchart TD
     Q3 -->|No| S3["Refine the problem<br/>statement first"]
     Q3 -->|Yes| S4["ML is a good fit!"]
 
-    style Q1 fill:#ffeaa7,stroke:#fdcb6e,color:#000
-    style Q2 fill:#ffeaa7,stroke:#fdcb6e,color:#000
-    style Q3 fill:#ffeaa7,stroke:#fdcb6e,color:#000
-    style S1 fill:#fab1a0,stroke:#e17055,color:#000
-    style S2 fill:#fab1a0,stroke:#e17055,color:#000
-    style S3 fill:#fab1a0,stroke:#e17055,color:#000
-    style S4 fill:#55efc4,stroke:#00b894,color:#000
+    style Q1 fill:#ffeaa7,stroke:#fdcb6e
+    style Q2 fill:#ffeaa7,stroke:#fdcb6e
+    style Q3 fill:#ffeaa7,stroke:#fdcb6e
+    style S1 fill:#fab1a0,stroke:#e17055
+    style S2 fill:#fab1a0,stroke:#e17055
+    style S3 fill:#fab1a0,stroke:#e17055
+    style S4 fill:#55efc4,stroke:#00b894
 ```
 
 ---

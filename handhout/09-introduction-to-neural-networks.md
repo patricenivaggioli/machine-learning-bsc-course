@@ -26,9 +26,9 @@ where $f$ is an **activation function**.
 
 ```mermaid
 flowchart LR
-    X1["x₁"] --> |"w₁"| N["Σ + b<br/>then f(z)"]
-    X2["x₂"] --> |"w₂"| N
-    X3["x₃"] --> |"w₃"| N
+    X1["x₁"] -->|"w₁"| N["Σ + b<br/>then f(z)"]
+    X2["x₂"] -->|"w₂"| N
+    X3["x₃"] -->|"w₃"| N
     N --> Y["output"]
 
     style X1 fill:#74b9ff,stroke:#0984e3,color:#000
@@ -348,7 +348,7 @@ mindmap
       ReLU for hidden layers
       Sigmoid/Softmax for output
     Architecture
-      Input → Hidden(s) → Output
+      Input → Hidden → Output
       More layers = more capacity
     Training
       Forward pass: compute predictions
